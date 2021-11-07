@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Timer</title>
+    <style>
+        body {
+            margin: 0%;
+            background-image: url("background\ \(2\).jpg");
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+        p {
+            font-size: 5em;
+            color: darkblue;
+            text-align:right;
+          
+            
+        }
+     h1 {
+         font-size: 8em;
+         margin-top: 60%;
+     }
+     .container {
+         display: flex;
+        margin-left: 60%;
+        
+     }
+    </style>
+</head>
+<body>
+    <div class="container">
+       
+        <h1 id="count">10</h1>
+        
+    </div>
+    <div><p>Countdown for 10 second</p></div>
+
+    <script type="text/javascript">
+        var counter = 10;
+
+        setInterval( function(){
+            counter--;
+
+            if( counter >= 0 ){
+                id = document.getElementById("count")
+                id.innerHTML = counter;
+            }
+            if( counter === 0 ){
+                id.innerHTML = "COMPLETE"
+                
+            }
+        },1000);
+
+    </script>
+    
+</body>
+</html>
